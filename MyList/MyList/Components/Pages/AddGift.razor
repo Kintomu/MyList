@@ -1,0 +1,85 @@
+﻿@page "/AddGift"
+@using MyList.Data_Access
+@using MyList.Models
+@rendermode InteractiveServer
+@inject GiftListContext _context
+
+<PageTitle>Add Gift</PageTitle>
+
+<h1>Add Gift</h1>
+
+<div>
+    <label for="listName">List Name:</label>
+    <input type="text" id="listName" @bind="listName" />
+</div>
+<div>
+    <label for="giftName">Gift Name:</label>
+    <input type="text" id="giftName" @bind="giftName" />
+</div>
+<div>
+    <label for="giftDescription">Gift Description:</label>
+    <input type="text" id="giftDescription" @bind="giftDescription" />
+</div>
+<div>
+    <label for="isPurchased">Is Purchased:</label>
+    <input type="checkbox" id="isPurchased" @bind="isPurchased" />
+</div>
+
+<button class="btn btn-primary" @onclick="AddGiftToList">Add Gift</button>
+
+@* Success/failure message *@
+@if (showMessage)
+{
+    <div class="alert @messageClass" role="alert">
+        @message
+    </div>
+}
+
+@code {
+    private string listName = "";
+    private string giftName = "";
+    private string giftDescription = "";
+    private bool isPurchased = false;
+
+    // For success/failure message
+    private bool showMessage = false;
+    private string message = "";
+    private string messageClass = ""; 
+
+    private async Task AddGiftToList()
+    {
+        showMessage = false; // Hide any previous message
+
+        try
+        {
+            var newGiftList = new GiftList
+            {
+                ListName = listName,
+                GiftName = giftName,
+                GiftDescription = giftDescription,
+                IsPurchased = isPurchased
+            };
+
+            _context.GiftLists.Add(newGiftList);
+            await _context.SaveChangesAsync();
+
+            // Success message
+            message = "Gift added successfully!";
+            messageClass = "alert-success"; 
+            showMessage = true; 
+
+            // Clear input fields
+            listName = "";
+            giftName = "";
+            giftDescription = "";
+            isPurchased = false;
+        }
+        catch (Exception ex) 
+        {
+            // Failure message (you might want to log the exception)
+            message = "Error adding gift: " + ex.Message; 
+            messageClass = "alert-danger"; 
+            showMessage = true;
+        }
+    }
+}
