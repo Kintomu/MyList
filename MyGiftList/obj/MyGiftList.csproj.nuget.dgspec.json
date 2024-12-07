@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\Kinto\\.nuget\\packages\\",
         "outputPath": "D:\\Repos\\MyGiftList\\MyGiftList\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\Kinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
