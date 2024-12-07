@@ -9,12 +9,14 @@
   <ItemGroup>
     <PackageReference Include="Blazorise" Version="1.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
     <PackageReference Include="SQLite" Version="3.13.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Components\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

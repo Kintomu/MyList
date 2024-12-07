@@ -1,0 +1,32 @@
+@page "/Index"
+@using Microsoft.EntityFrameworkCore
+@using MyGiftList.Data_Access
+@using MyGiftList.Models
+@inject GiftListContext _context
+
+<h1>My Gift Lists</h1>
+
+@if (giftLists == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var list in giftLists)
+        {
+            <li>@list.ListName</li>
+        }
+    </ul>
+}
+
+@code {
+
+    private List<GiftList> giftLists;
+
+    protected override async Task OnInitializedAsync()
+    {
+        giftLists = await _context.GiftLists.ToListAsync();
+    }
+    
+}
