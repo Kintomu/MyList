@@ -3,7 +3,7 @@ using MyGiftList.Models;
 
 namespace MyGiftList.Data_Access;
 
-public class DbContext : DbContext
+public class GiftListDbContext : DbContext
 {
     public DbSet<GiftList> GiftLists { get; set; }
 
