@@ -13,7 +13,6 @@
         "packagesPath": "C:\\Users\\Kinto\\.nuget\\packages\\",
         "outputPath": "D:\\Repos\\MyGiftList\\MyGiftList\\obj\\",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\Kinto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -49,15 +48,17 @@
           "dependencies": {
             "Blazorise": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
-              "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[9.0.0, )"
             },
             "SQLite": {
               "target": "Package",
