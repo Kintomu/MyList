@@ -1,0 +1,39 @@
+﻿@page "/Gifts"
+@using Microsoft.EntityFrameworkCore
+@using MyList.Data_Access
+@using MyList.Models
+@attribute [StreamRendering]
+@inject GiftListContext _context
+
+<PageTitle>Gifts</PageTitle>
+
+<h1>Gifts</h1>
+
+<p>List of Gifts</p>
+
+@if (giftLists == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var list in giftLists)
+        {
+            <li>@list.GiftName</li>
+            <li>@list.GiftDescription</li>
+            <li>Is Purchased: @list.IsPurchased</li>
+            <br/>
+        }
+    </ul>
+}
+
+@code {    
+    
+    private List<GiftList> giftLists;
+
+    protected override async Task OnInitializedAsync()
+    {
+        giftLists = await _context.GiftLists.ToListAsync();
+    }
+}
