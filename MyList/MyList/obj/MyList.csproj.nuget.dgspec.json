@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\MyList\\MyList\\MyList.csproj": {}
+    "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\MyList\\MyList\\MyList.csproj": {
+    "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\MyList\\MyList\\MyList.csproj",
+        "projectUniqueName": "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj",
         "projectName": "MyList",
-        "projectPath": "D:\\Repos\\MyList\\MyList\\MyList.csproj",
+        "projectPath": "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj",
         "packagesPath": "C:\\Users\\Kinto\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\MyList\\MyList\\obj\\",
+        "outputPath": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -47,6 +47,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -60,6 +64,14 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[7.1.0, )"
             }
           },
           "imports": [

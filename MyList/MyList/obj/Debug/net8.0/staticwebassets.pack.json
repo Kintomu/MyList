@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "D:\\Repos\\MyList\\MyList\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css",
+      "Id": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css",
       "PackagePath": "staticwebassets\\MyList.bundle.scp.css"
     },
     {
-      "Id": "D:\\Repos\\MyList\\MyList\\wwwroot\\app.css",
+      "Id": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "D:\\Repos\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Repos\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Repos\\MyList\\MyList\\wwwroot\\favicon.png",
+      "Id": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
