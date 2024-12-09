@@ -40,7 +40,7 @@ namespace MyList.Controllers
                 return NotFound();
             }
 
-            return giftList;
+            return Ok(giftList);
         }
         
         [HttpPost]

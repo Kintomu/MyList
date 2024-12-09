@@ -2,12 +2,13 @@ using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using MyList.Models;
+using MyList.Tests;
 
 namespace MyList.Data_Access;
 
 public class GiftListContext : DbContext
 {
-    public GiftListContext(DbContextOptions<GiftListContext> options) : base(options)
+    public GiftListContext(DbContextOptions<TestGiftListContext> options) : base(options)
     {
     }
     public DbSet<GiftList> GiftLists { get; set; }
