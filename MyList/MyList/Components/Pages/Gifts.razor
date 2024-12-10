@@ -3,37 +3,42 @@
 @using MyList.Data_Access
 @using MyList.Models
 @attribute [StreamRendering]
-@inject GiftListContext _context
+@inject GiftListContext Context
 
-<PageTitle>Gifts</PageTitle>
-
-<h1>Gifts</h1>
-
-<p>List of Gifts</p>
-
-@if (giftLists == null)
+@if (false)
 {
     <p>Loading...</p>
 }
-else
+<h1>My Lists</h1>
+
+@foreach (var group in _giftLists!.GroupBy(g => g.ListName))
 {
+    <h3>@group.Key</h3>
     <ul>
-        @foreach (var list in giftLists)
+        @foreach (var gift in group)
         {
-            <li>@list.GiftName</li>
-            <li>@list.GiftDescription</li>
-            <li>Is Purchased: @list.IsPurchased</li>
-            <br/>
+            if (!string.IsNullOrEmpty(gift.GiftName)) 
+            {
+                <li>
+                    <input type="checkbox" @bind="gift.IsPurchased" @oninput="(async () => await UpdateGift(gift))" />
+                    <strong>@gift.GiftName</strong> - @gift.GiftDescription
+                </li>
+            }
         }
     </ul>
 }
 
-@code {    
-    
-    private List<GiftList> giftLists;
+@code {
+    private List<GiftList>? _giftLists;
 
     protected override async Task OnInitializedAsync()
     {
-        giftLists = await _context.GiftLists.ToListAsync();
+        _giftLists = await Context.GiftLists.ToListAsync();
+    }
+
+    private async Task UpdateGift(GiftList gift)
+    {
+        Context.Entry(gift).State = EntityState.Modified;
+        await Context.SaveChangesAsync();
     }
 }

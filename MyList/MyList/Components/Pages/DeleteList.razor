@@ -1,0 +1,138 @@
+@page "/DeleteList"
+@using Microsoft.EntityFrameworkCore
+@using MyList.Data_Access
+@using MyList.Models
+@inject GiftListContext Context
+
+@if (_giftLists == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h2>My Lists</h2>
+
+    <div>
+        <label for="listName">Select List to Delete:</label>
+        <select id="listName" @bind="_selectedListName">
+            <option value="">-- Select a list --</option>
+            @foreach (var listName in _existingListNames)
+            {
+                <option value="@listName">@listName</option>
+            }
+        </select>
+        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(_selectedListName == "")">Delete List</button>
+    </div>
+
+    <br>
+    <br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>List Name</th>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Is Done</th>
+            <th>Select</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var group in _giftLists.GroupBy(g => g.ListName))
+        {
+            @foreach (var gift in group)
+            {
+                <tr>
+                    <td>@group.Key</td>
+                    <td>@gift.GiftName</td>
+                    <td>@gift.GiftDescription</td>
+                    <td>@(gift.IsPurchased ? "Done" : "")</td>
+                    <td><input type="checkbox" @bind="_selectedItems[gift.Id]"/></td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+
+    <button class="btn btn-danger" @onclick="DeleteSelectedItems">Delete Selected Items</button>
+}
+
+@code {
+    private List<GiftList>? _giftLists;
+    private List<string> _existingListNames = new();
+    private string _selectedListName = "";
+    private Dictionary<int, bool> _selectedItems = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _giftLists = await Context.GiftLists.ToListAsync();
+
+        foreach (var gift in _giftLists)
+        {
+            _selectedItems[gift.Id] = false;
+        }
+
+        _existingListNames = await Context.GiftLists
+            .Select(g => g.ListName)
+            .Distinct()
+            .ToListAsync();
+    }
+
+    private async Task DeleteSelectedItems()
+    {
+        var giftsToDelete = _selectedItems.Where(kvp => kvp.Value).Select(kvp => kvp.Key).ToList();
+
+        if (giftsToDelete.Any())
+        {
+            try
+            {
+                foreach (var giftId in giftsToDelete)
+                {
+                    var giftToDelete = await Context.GiftLists.FindAsync(giftId);
+                    if (giftToDelete != null)
+                    {
+                        Context.GiftLists.Remove(giftToDelete);
+                    }
+                }
+
+                await Context.SaveChangesAsync();
+                
+                _giftLists = await Context.GiftLists.ToListAsync();
+                _selectedItems = _giftLists.ToDictionary(g => g.Id, _ => false); 
+
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                //TODO: Add Logger
+                Console.WriteLine("Error deleting items: " + ex.Message);
+            }
+        }
+    }
+
+    private async Task DeleteEntireList()
+    {
+        try
+        {
+            var itemsToDelete = await Context.GiftLists.Where(g => g.ListName == _selectedListName).ToListAsync();
+            if (itemsToDelete.Any())
+            {
+                Context.GiftLists.RemoveRange(itemsToDelete);
+                await Context.SaveChangesAsync();
+                
+                _giftLists = await Context.GiftLists.ToListAsync();
+                _existingListNames = await Context.GiftLists
+                    .Select(g => g.ListName)
+                    .Distinct()
+                    .ToListAsync();
+
+                StateHasChanged();
+            }
+        }
+        catch (Exception ex)
+        {
+            //TODO: Add Logger
+            Console.WriteLine("Error deleting list: " + ex.Message);
+        }
+    }
+}
