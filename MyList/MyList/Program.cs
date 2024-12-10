@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using MyList.Components;
 using MyList.Data_Access;
+using MyList.Models;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,13 +34,6 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Gift List API V1");
 });
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
@@ -49,5 +43,21 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<GiftListContext>();
+    context.Database.EnsureCreated();
+
+    if (!context.GiftLists.Any())
+    {
+        context.GiftLists.AddRange(
+            new GiftList { ListName = "List 1", GiftName = "Item 1", GiftDescription = "Description 1" },
+            new GiftList { ListName = "List 2", GiftName = "Item 2", GiftDescription = "Description 2" }
+        );
+        context.SaveChanges();
+    }
+}
 
 app.Run();

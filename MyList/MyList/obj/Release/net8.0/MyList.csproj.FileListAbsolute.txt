@@ -260,3 +260,16 @@ D:\Repos\MyGiftList\MyList\MyList\obj\Release\net8.0\refint\MyList.dll
 D:\Repos\MyGiftList\MyList\MyList\obj\Release\net8.0\MyList.pdb
 D:\Repos\MyGiftList\MyList\MyList\obj\Release\net8.0\MyList.genruntimeconfig.cache
 D:\Repos\MyGiftList\MyList\MyList\obj\Release\net8.0\ref\MyList.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.AspNetCore.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Extensions.Hosting.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Extensions.Logging.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Formatting.Compact.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Settings.Configuration.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Sinks.Console.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Sinks.Debug.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Release\net8.0\Serilog.Sinks.File.dll
