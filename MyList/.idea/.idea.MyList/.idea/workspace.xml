@@ -9,27 +9,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="fixed formatting, added better delete functionality.">
+    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="Fixed tests, and formatting, cleaned up code.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Home.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Home.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/GiftList.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Models/GiftList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Models/GiftList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/MyList.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/MyList.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +66,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c8e7ca976f350cba9836d5565dac56b11e0b56656fa786460eb1395857a6fa/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8f01ba41853b8bd86b6d5b7b8e1e669b98673feb6a7a1b2b0a3622f9d4ad/DbContextOptionsBuilder`.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Repos/MyGiftList/MyList/MyList/Components/Pages/AddGift.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MyList/obj/Release/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MyList/wwwroot/bootstrap/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -73,7 +84,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "be39000d-b7b5-4f6c-9ff5-d47e492b2faf.executor": "Debug",
-    "git-widget-placeholder": "taylor/UnitTests",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,7 +152,7 @@
       <workItem from="1733601492781" duration="2579000" />
       <workItem from="1733604437030" duration="318000" />
       <workItem from="1733750515171" duration="11333000" />
-      <workItem from="1733837653749" duration="18357000" />
+      <workItem from="1733837653749" duration="20506000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
@@ -199,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733859650457</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed tests, and formatting, cleaned up code.">
+      <option name="closed" value="true" />
+      <created>1733862310387</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733862310387</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +235,8 @@
     <MESSAGE value="added add item to list" />
     <MESSAGE value="cleaned up formatting, added the ability to check items to done status." />
     <MESSAGE value="fixed formatting, added better delete functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed formatting, added better delete functionality." />
+    <MESSAGE value="Fixed tests, and formatting, cleaned up code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed tests, and formatting, cleaned up code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -227,19 +247,6 @@
           </properties>
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs</url>
-          <line>26</line>
-          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Controllers\GiftListsController.cs" containingFunctionPresentation="Method 'GetGiftLists'">
-            <startOffsets>
-              <option value="728" />
-            </startOffsets>
-            <endOffsets>
-              <option value="749" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
           <line>47</line>

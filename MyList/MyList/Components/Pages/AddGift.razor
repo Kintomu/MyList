@@ -4,6 +4,7 @@
 @using MyList.Models
 @rendermode InteractiveServer
 @inject GiftListContext Context
+@inject ILogger<AddGift> Logger;
 
 
 <h1>Manage Lists</h1>
@@ -56,7 +57,7 @@
     private string _newItemName = "";
     private string _newItemDescription = "";
     private bool _newIsPurchased;
-    
+
     private List<string> _existingListNames = new();
     private string _selectedListName = "";
     private List<string> _existingItems = new();
@@ -95,7 +96,7 @@
             _showMessage = true;
 
             _listName = "";
-            
+
             _existingListNames = await Context.GiftLists
                 .Select(g => g.ListName)
                 .Distinct()
@@ -103,10 +104,10 @@
         }
         catch (Exception ex)
         {
-            // TODO: ADD Logger - Failure message
             _message = "Error adding list: " + ex.Message;
             _messageClass = "alert-danger";
             _showMessage = true;
+            Logger.LogError(ex, "Error adding list");
         }
     }
 
@@ -137,10 +138,10 @@
         }
         catch (Exception ex)
         {
-            // TODO: ADD Logger - Failure message
             _message = "Error adding item to list: " + ex.Message;
             _messageClass = "alert-danger";
             _showMessage = true;
+            Logger.LogError(ex, "Error adding item to list");
         }
     }
 

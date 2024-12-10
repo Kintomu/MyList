@@ -3,6 +3,7 @@
 @using MyList.Data_Access
 @using MyList.Models
 @inject GiftListContext Context
+@inject ILogger<DeleteList> Logger;
 
 @if (_giftLists == null)
 {
@@ -104,7 +105,7 @@ else
             }
             catch (Exception ex)
             {
-                //TODO: Add Logger
+                Logger.LogError(ex, "Error deleting item");
                 Console.WriteLine("Error deleting items: " + ex.Message);
             }
         }
@@ -131,7 +132,7 @@ else
         }
         catch (Exception ex)
         {
-            //TODO: Add Logger
+            Logger.LogError(ex, "Error deleting list");
             Console.WriteLine("Error deleting list: " + ex.Message);
         }
     }

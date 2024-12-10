@@ -2,8 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using MyList.Components;
 using MyList.Data_Access;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyList", "Logs");
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(Path.Combine(logDirectory, $"log-{DateTime.Now:yyyy-MM-dd}.log")) 
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
