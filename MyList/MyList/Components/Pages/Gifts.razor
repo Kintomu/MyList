@@ -22,7 +22,7 @@ else
                 @if (!string.IsNullOrEmpty(gift.GiftName)) 
                 {
                     <li>
-                        <input type="checkbox" @bind="gift.IsPurchased" @oninput="(async () => await UpdateGift(gift))" /> <label>Done</label>
+                        <input type="checkbox" @bind="gift.IsPurchased" @oninput="(async () => await UpdateGift(gift))" />
                         <strong>@gift.GiftName</strong> - @gift.GiftDescription
                     </li>
                 }

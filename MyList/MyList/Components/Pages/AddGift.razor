@@ -5,44 +5,45 @@
 @rendermode InteractiveServer
 @inject GiftListContext _context
 
-<h1>Add List</h1>
 
-<div>
-    <label for="listName">List Name:</label>
-    <input type="text" id="listName" @bind="listName" />
+<h1>Manage Lists</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="listName">List Name:</label>
+            <input type="text" class="form-control w-50" id="listName" @bind="listName"/>
+        </div>
+        <button class="btn btn-primary" @onclick="AddList">Add List</button>
+
+        <div class="form-group">
+            <label for="existingList">Select List:</label>
+            <select id="existingList" class="form-control w-50" @bind="selectedListName"
+                    @oninput="OnSelectedListChanged">
+                <option value="">-- Select a list --</option>
+                @foreach (var listName in existingListNames)
+                {
+                    <option value="@listName">@listName</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="newItemName">Item Name:</label>
+            <input type="text" class="form-control w-50" id="newItemName" @bind="newItemName"/>
+        </div>
+        <div class="form-group">
+            <label for="newItemDescription">Item Description:</label>
+            <input type="text" class="form-control w-50" id="newItemDescription" @bind="newItemDescription"/>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="newIsPurchased" @bind="newIsPurchased"/>
+            <label class="form-check-label" for="newIsPurchased">Is Done</label>
+        </div>
+        <button class="btn btn-primary" @onclick="AddNewItemToList">Add Item to List</button>
+    </div>
 </div>
 
-<button class="btn btn-primary" @onclick="AddList">Add List</button> 
 
-<h2>Add New Item to Existing List</h2>
-
-<div>
-    <label for="existingList">Select List:</label>
-    <select id="existingList" @bind="selectedListName" @oninput="OnSelectedListChanged">
-        <option value="">-- Select a list --</option>
-        @foreach (var listName in existingListNames)
-        {
-            <option value="@listName">@listName</option>
-        }
-    </select>
-</div>
-
-<div>
-    <label for="newItemName">Item Name:</label>
-    <input type="text" id="newItemName" @bind="newItemName" />
-</div>
-
-<div>
-    <label for="newItemDescription">Item Description:</label>
-    <input type="text" id="newItemDescription" @bind="newItemDescription" />
-</div>
-
-<div>
-    <label for="newIsPurchased">Is Done:</label>
-    <input type="checkbox" id="newIsPurchased" @bind="newIsPurchased" />
-</div>
-
-<button class="btn btn-primary" @onclick="AddNewItemToList">Add Item to List</button>
+@* ... (rest of your code remains the same) ... *@
 
 
 @* Success/failure message *@
@@ -52,6 +53,8 @@
         @message
     </div>
 }
+
+
 
 @code {
     private string listName = "";
@@ -83,18 +86,18 @@
             .ToListAsync();
     }
 
-    private async Task AddList() 
+    private async Task AddList()
     {
         showMessage = false;
 
         try
         {
-            var newList = new GiftList 
+            var newList = new GiftList
             {
                 ListName = listName,
                 GiftName = "", // You might need to adjust these 
                 GiftDescription = "", // based on your model's requirements
-                IsPurchased = false 
+                IsPurchased = false
             };
 
             _context.GiftLists.Add(newList);
@@ -104,7 +107,7 @@
             messageClass = "alert-success";
             showMessage = true;
 
-            listName = ""; 
+            listName = "";
 
             // Refresh existing list names
             existingListNames = await _context.GiftLists
@@ -170,4 +173,5 @@
             existingItems.Clear();
         }
     }
+
 }

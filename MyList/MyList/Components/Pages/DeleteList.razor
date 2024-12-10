@@ -2,10 +2,7 @@
 @using Microsoft.EntityFrameworkCore
 @using MyList.Data_Access
 @using MyList.Models
-@attribute [StreamRendering]
 @inject GiftListContext _context
-
-<PageTitle>My Lists</PageTitle>
 
 @if (giftLists == null)
 {
@@ -15,26 +12,44 @@ else
 {
     <h2>My Lists</h2>
 
+    <div>
+        <label for="listName">Select List to Delete:</label>
+        <select id="listName" @bind="selectedListName">
+            <option value="">-- Select a list --</option>
+            @foreach (var listName in existingListNames)
+            {
+                <option value="@listName">@listName</option>
+            }
+        </select>
+        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(selectedListName == "")">Delete List</button>
+    </div>
+
+    <br>
+    <br>
+
     <table class="table">
         <thead>
         <tr>
             <th>List Name</th>
-            <th>Gift Name</th>
-            <th>Gift Description</th>
-            <th>Is Purchased</th>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Is Done</th>
             <th>Select</th>
         </tr>
         </thead>
         <tbody>
-        @foreach (var gift in giftLists)
+        @foreach (var group in giftLists.GroupBy(g => g.ListName))
         {
-            <tr>
-                <td>@gift.ListName</td>
-                <td>@gift.GiftName</td>
-                <td>@gift.GiftDescription</td>
-                <td>@gift.IsPurchased</td>
-                <td><input type="checkbox" @onchange="@(e => HandleCheckboxChange(gift, (bool)e.Value))" /></td>
-            </tr>
+            @foreach (var gift in group)
+            {
+                <tr>
+                    <td>@group.Key</td>
+                    <td>@gift.GiftName</td>
+                    <td>@gift.GiftDescription</td>
+                    <td>@(gift.IsPurchased ? "Done" : "")</td>
+                    <td><input type="checkbox" @bind="selectedItems[gift.Id]"/></td>
+                </tr>
+            }
         }
         </tbody>
     </table>
@@ -44,35 +59,80 @@ else
 
 @code {
     private List<GiftList> giftLists;
-    private List<GiftList> selectedItems = new();
+    private List<string> existingListNames = new();
+    private string selectedListName = "";
+    private Dictionary<int, bool> selectedItems = new();
 
     protected override async Task OnInitializedAsync()
     {
         giftLists = await _context.GiftLists.ToListAsync();
+
+        foreach (var gift in giftLists)
+        {
+            selectedItems[gift.Id] = false;
+        }
+
+        existingListNames = await _context.GiftLists
+            .Select(g => g.ListName)
+            .Distinct()
+            .ToListAsync();
     }
 
     private async Task DeleteSelectedItems()
     {
-        if (selectedItems.Any())
-        {
-            _context.GiftLists.RemoveRange(selectedItems);
-            await _context.SaveChangesAsync();
+        var giftsToDelete = selectedItems.Where(kvp => kvp.Value).Select(kvp => kvp.Key).ToList();
 
-            // Refresh the list and clear selection
-            giftLists = await _context.GiftLists.ToListAsync();
-            selectedItems.Clear();
+        if (giftsToDelete.Any())
+        {
+            try
+            {
+                foreach (var giftId in giftsToDelete)
+                {
+                    var giftToDelete = await _context.GiftLists.FindAsync(giftId);
+                    if (giftToDelete != null)
+                    {
+                        _context.GiftLists.Remove(giftToDelete);
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+
+                // Refresh the list AND the dictionary
+                giftLists = await _context.GiftLists.ToListAsync();
+                selectedItems = giftLists.ToDictionary(g => g.Id, g => false); 
+
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error deleting items: " + ex.Message);
+            }
         }
     }
 
-    private void HandleCheckboxChange(GiftList gift, bool isChecked)
+    private async Task DeleteEntireList()
     {
-        if (isChecked)
+        try
         {
-            selectedItems.Add(gift);
+            var itemsToDelete = await _context.GiftLists.Where(g => g.ListName == selectedListName).ToListAsync();
+            if (itemsToDelete.Any())
+            {
+                _context.GiftLists.RemoveRange(itemsToDelete);
+                await _context.SaveChangesAsync();
+
+                // Refresh the list and the dropdown
+                giftLists = await _context.GiftLists.ToListAsync();
+                existingListNames = await _context.GiftLists
+                    .Select(g => g.ListName)
+                    .Distinct()
+                    .ToListAsync();
+
+                StateHasChanged();
+            }
         }
-        else
+        catch (Exception ex)
         {
-            selectedItems.Remove(gift);
+            Console.WriteLine("Error deleting list: " + ex.Message);
         }
     }
 }

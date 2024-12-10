@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="added add item to list">
+    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="cleaned up formatting, added the ability to check items to done status.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/GiftList.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
@@ -136,7 +137,7 @@
       <workItem from="1733601492781" duration="2579000" />
       <workItem from="1733604437030" duration="318000" />
       <workItem from="1733750515171" duration="11333000" />
-      <workItem from="1733837653749" duration="13034000" />
+      <workItem from="1733837653749" duration="15678000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
@@ -178,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733856216976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cleaned up formatting, added the ability to check items to done status.">
+      <option name="closed" value="true" />
+      <created>1733856980085</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733856980085</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +202,8 @@
     <MESSAGE value="First pass at adding unit tests." />
     <MESSAGE value="added unit tests, and delete page" />
     <MESSAGE value="added add item to list" />
-    <option name="LAST_COMMIT_MESSAGE" value="added add item to list" />
+    <MESSAGE value="cleaned up formatting, added the ability to check items to done status." />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up formatting, added the ability to check items to done status." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
