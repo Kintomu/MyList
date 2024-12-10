@@ -4,28 +4,26 @@
 @rendermode InteractiveServer
 @inject GiftListContext _context
 
-<PageTitle>Add Gift</PageTitle>
-
-<h1>Add Gift</h1>
+<h1>Add List</h1>
 
 <div>
     <label for="listName">List Name:</label>
     <input type="text" id="listName" @bind="listName" />
 </div>
 <div>
-    <label for="giftName">Gift Name:</label>
+    <label for="giftName">Item Name:</label>
     <input type="text" id="giftName" @bind="giftName" />
 </div>
 <div>
-    <label for="giftDescription">Gift Description:</label>
+    <label for="giftDescription">Item Description:</label>
     <input type="text" id="giftDescription" @bind="giftDescription" />
 </div>
 <div>
-    <label for="isPurchased">Is Purchased:</label>
+    <label for="isPurchased">Is Done:</label>
     <input type="checkbox" id="isPurchased" @bind="isPurchased" />
 </div>
 
-<button class="btn btn-primary" @onclick="AddGiftToList">Add Gift</button>
+<button class="btn btn-primary" @onclick="AddGiftToList">Add List</button>
 
 @* Success/failure message *@
 @if (showMessage)

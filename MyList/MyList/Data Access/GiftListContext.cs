@@ -7,10 +7,15 @@ using MyList.Tests;
 namespace MyList.Data_Access;
 
 public class GiftListContext : DbContext
-{
+{ 
+    public GiftListContext(DbContextOptions<GiftListContext> options) : base(options)
+    {
+    }
+    
     public GiftListContext(DbContextOptions<TestGiftListContext> options) : base(options)
     {
     }
+    
     public DbSet<GiftList> GiftLists { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

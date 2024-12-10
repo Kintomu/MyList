@@ -5,11 +5,7 @@
 @attribute [StreamRendering]
 @inject GiftListContext _context
 
-<PageTitle>Gifts</PageTitle>
-
-<h1>Gifts</h1>
-
-<p>List of Gifts</p>
+<PageTitle>My Lists</PageTitle>
 
 @if (giftLists == null)
 {
@@ -17,15 +13,20 @@
 }
 else
 {
-    <ul>
-        @foreach (var list in giftLists)
-        {
-            <li>@list.GiftName</li>
-            <li>@list.GiftDescription</li>
-            <li>Is Purchased: @list.IsPurchased</li>
-            <br/>
-        }
-    </ul>
+    <h2>My Lists</h2>
+
+    @foreach (var group in giftLists.GroupBy(g => g.ListName))
+    {
+        <h3>@group.Key</h3>  
+        <ul>
+            @foreach (var gift in group) 
+            {
+                <li>
+                    <strong>@gift.GiftName</strong> - @gift.GiftDescription (@(gift.IsPurchased ? "Purchased" : "Not Purchased"))
+                </li>
+            }
+        </ul>
+    }
 }
 
 @code {    

@@ -9,36 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="unversioned files">
-      <change afterPath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyList/Tests/TestGiftListContext.cs" afterDir="false" />
+    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/App.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Layout/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Layout/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Layout/NavMenu.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Home.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Home.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Data Access/GiftListContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Data Access/GiftListContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/MyList.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/MyList.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/GiftList.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/bundle/MyList.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/bundle/MyList.styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/projectbundle/MyList.bundle.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/scopedcss/projectbundle/MyList.bundle.scp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c8e7ca976f350cba9836d5565dac56b11e0b56656fa786460eb1395857a6fa/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8f01ba41853b8bd86b6d5b7b8e1e669b98673feb6a7a1b2b0a3622f9d4ad/DbContextOptionsBuilder`.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -73,22 +72,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.MyList: IIS Express.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;be39000d-b7b5-4f6c-9ff5-d47e492b2faf.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;taylor/UnitTests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RiderUnitTestingPageId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.MyList: IIS Express.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "be39000d-b7b5-4f6c-9ff5-d47e492b2faf.executor": "Debug",
+    "git-widget-placeholder": "taylor/UnitTests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "RiderUnitTestingPageId",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyList: IIS Express">
     <configuration name="MyList: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyList/MyList.csproj" />
@@ -146,7 +145,8 @@
       <updated>1733601491627</updated>
       <workItem from="1733601492781" duration="2579000" />
       <workItem from="1733604437030" duration="318000" />
-      <workItem from="1733750515171" duration="11266000" />
+      <workItem from="1733750515171" duration="11333000" />
+      <workItem from="1733837653749" duration="8283000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
@@ -164,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733755541976</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First pass at adding unit tests.">
+      <option name="closed" value="true" />
+      <created>1733769964158</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733769964158</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +184,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added API and Swagger UI" />
     <MESSAGE value="unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
+    <MESSAGE value="First pass at adding unit tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="First pass at adding unit tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

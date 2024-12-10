@@ -1,0 +1,78 @@
+@page "/DeleteList"
+@using Microsoft.EntityFrameworkCore
+@using MyList.Data_Access
+@using MyList.Models
+@attribute [StreamRendering]
+@inject GiftListContext _context
+
+<PageTitle>My Lists</PageTitle>
+
+@if (giftLists == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h2>My Lists</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>List Name</th>
+            <th>Gift Name</th>
+            <th>Gift Description</th>
+            <th>Is Purchased</th>
+            <th>Select</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var gift in giftLists)
+        {
+            <tr>
+                <td>@gift.ListName</td>
+                <td>@gift.GiftName</td>
+                <td>@gift.GiftDescription</td>
+                <td>@gift.IsPurchased</td>
+                <td><input type="checkbox" @onchange="@(e => HandleCheckboxChange(gift, (bool)e.Value))" /></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <button class="btn btn-danger" @onclick="DeleteSelectedItems">Delete Selected Items</button>
+}
+
+@code {
+    private List<GiftList> giftLists;
+    private List<GiftList> selectedItems = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        giftLists = await _context.GiftLists.ToListAsync();
+    }
+
+    private async Task DeleteSelectedItems()
+    {
+        if (selectedItems.Any())
+        {
+            _context.GiftLists.RemoveRange(selectedItems);
+            await _context.SaveChangesAsync();
+
+            // Refresh the list and clear selection
+            giftLists = await _context.GiftLists.ToListAsync();
+            selectedItems.Clear();
+        }
+    }
+
+    private void HandleCheckboxChange(GiftList gift, bool isChecked)
+    {
+        if (isChecked)
+        {
+            selectedItems.Add(gift);
+        }
+        else
+        {
+            selectedItems.Remove(gift);
+        }
+    }
+}
