@@ -5,36 +5,43 @@
 @attribute [StreamRendering]
 @inject GiftListContext _context
 
-<PageTitle>My Lists</PageTitle>
-
 @if (giftLists == null)
 {
     <p>Loading...</p>
 }
 else
 {
-    <h2>My Lists</h2>
+    <h1>My Lists</h1>
 
     @foreach (var group in giftLists.GroupBy(g => g.ListName))
     {
-        <h3>@group.Key</h3>  
+        <h3>@group.Key</h3>
         <ul>
-            @foreach (var gift in group) 
+            @foreach (var gift in group)
             {
-                <li>
-                    <strong>@gift.GiftName</strong> - @gift.GiftDescription (@(gift.IsPurchased ? "Purchased" : "Not Purchased"))
-                </li>
+                @if (!string.IsNullOrEmpty(gift.GiftName)) 
+                {
+                    <li>
+                        <input type="checkbox" @bind="gift.IsPurchased" @oninput="(async () => await UpdateGift(gift))" /> <label>Done</label>
+                        <strong>@gift.GiftName</strong> - @gift.GiftDescription
+                    </li>
+                }
             }
         </ul>
     }
 }
 
-@code {    
-    
+@code {
     private List<GiftList> giftLists;
 
     protected override async Task OnInitializedAsync()
     {
         giftLists = await _context.GiftLists.ToListAsync();
+    }
+
+    private async Task UpdateGift(GiftList gift)
+    {
+        _context.Entry(gift).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
     }
 }
