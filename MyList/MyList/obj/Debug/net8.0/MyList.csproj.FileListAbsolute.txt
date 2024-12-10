@@ -406,3 +406,14 @@ D:\Repos\MyGiftList\MyList\MyList\obj\Debug\net8.0\refint\MyList.dll
 D:\Repos\MyGiftList\MyList\MyList\obj\Debug\net8.0\MyList.pdb
 D:\Repos\MyGiftList\MyList\MyList\obj\Debug\net8.0\MyList.genruntimeconfig.cache
 D:\Repos\MyGiftList\MyList\MyList\obj\Debug\net8.0\ref\MyList.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+D:\Repos\MyGiftList\MyList\MyList\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll

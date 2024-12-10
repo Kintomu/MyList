@@ -1,4 +1,5 @@
 ﻿@page "/AddGift"
+@using Microsoft.EntityFrameworkCore
 @using MyList.Data_Access
 @using MyList.Models
 @rendermode InteractiveServer
@@ -10,20 +11,39 @@
     <label for="listName">List Name:</label>
     <input type="text" id="listName" @bind="listName" />
 </div>
+
+<button class="btn btn-primary" @onclick="AddList">Add List</button> 
+
+<h2>Add New Item to Existing List</h2>
+
 <div>
-    <label for="giftName">Item Name:</label>
-    <input type="text" id="giftName" @bind="giftName" />
-</div>
-<div>
-    <label for="giftDescription">Item Description:</label>
-    <input type="text" id="giftDescription" @bind="giftDescription" />
-</div>
-<div>
-    <label for="isPurchased">Is Done:</label>
-    <input type="checkbox" id="isPurchased" @bind="isPurchased" />
+    <label for="existingList">Select List:</label>
+    <select id="existingList" @bind="selectedListName" @oninput="OnSelectedListChanged">
+        <option value="">-- Select a list --</option>
+        @foreach (var listName in existingListNames)
+        {
+            <option value="@listName">@listName</option>
+        }
+    </select>
 </div>
 
-<button class="btn btn-primary" @onclick="AddGiftToList">Add List</button>
+<div>
+    <label for="newItemName">Item Name:</label>
+    <input type="text" id="newItemName" @bind="newItemName" />
+</div>
+
+<div>
+    <label for="newItemDescription">Item Description:</label>
+    <input type="text" id="newItemDescription" @bind="newItemDescription" />
+</div>
+
+<div>
+    <label for="newIsPurchased">Is Done:</label>
+    <input type="checkbox" id="newIsPurchased" @bind="newIsPurchased" />
+</div>
+
+<button class="btn btn-primary" @onclick="AddNewItemToList">Add Item to List</button>
+
 
 @* Success/failure message *@
 @if (showMessage)
@@ -35,49 +55,119 @@
 
 @code {
     private string listName = "";
-    private string giftName = "";
-    private string giftDescription = "";
+    private string itemName = "";
+    private string itemDescription = "";
     private bool isPurchased = false;
+    private string newItemName = "";
+    private string newItemDescription = "";
+    private bool newIsPurchased = false;
+
+    // For existing items
+    private List<string> existingListNames = new();
+    private string selectedListName = "";
+    private List<string> existingItems = new();
+    private string selectedItemName = "";
+    private bool updatedIsPurchased = false;
 
     // For success/failure message
     private bool showMessage = false;
     private string message = "";
-    private string messageClass = ""; 
+    private string messageClass = "";
 
-    private async Task AddGiftToList()
+    protected override async Task OnInitializedAsync()
     {
-        showMessage = false; // Hide any previous message
+        // Fetch existing list names
+        existingListNames = await _context.GiftLists
+            .Select(g => g.ListName)
+            .Distinct()
+            .ToListAsync();
+    }
+
+    private async Task AddList() 
+    {
+        showMessage = false;
+
+        try
+        {
+            var newList = new GiftList 
+            {
+                ListName = listName,
+                GiftName = "", // You might need to adjust these 
+                GiftDescription = "", // based on your model's requirements
+                IsPurchased = false 
+            };
+
+            _context.GiftLists.Add(newList);
+            await _context.SaveChangesAsync();
+
+            message = "List added successfully!";
+            messageClass = "alert-success";
+            showMessage = true;
+
+            listName = ""; 
+
+            // Refresh existing list names
+            existingListNames = await _context.GiftLists
+                .Select(g => g.ListName)
+                .Distinct()
+                .ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            // TODO: ADD Logger - Failure message
+            message = "Error adding list: " + ex.Message;
+            messageClass = "alert-danger";
+            showMessage = true;
+        }
+    }
+
+    private async Task AddNewItemToList()
+    {
+        showMessage = false;
 
         try
         {
             var newGiftList = new GiftList
             {
-                ListName = listName,
-                GiftName = giftName,
-                GiftDescription = giftDescription,
-                IsPurchased = isPurchased
+                ListName = selectedListName, // Add to the selected list
+                GiftName = newItemName,
+                GiftDescription = newItemDescription,
+                IsPurchased = newIsPurchased
             };
 
             _context.GiftLists.Add(newGiftList);
             await _context.SaveChangesAsync();
 
-            // Success message
-            message = "Gift added successfully!";
-            messageClass = "alert-success"; 
-            showMessage = true; 
-
-            // Clear input fields
-            listName = "";
-            giftName = "";
-            giftDescription = "";
-            isPurchased = false;
-        }
-        catch (Exception ex) 
-        {
-            // TODO: ADD Logger - Failure message 
-            message = "Error adding gift: " + ex.Message; 
-            messageClass = "alert-danger"; 
+            message = "Item added to list successfully!";
+            messageClass = "alert-success";
             showMessage = true;
+
+            newItemName = "";
+            newItemDescription = "";
+            newIsPurchased = false;
+        }
+        catch (Exception ex)
+        {
+            // TODO: ADD Logger - Failure message
+            message = "Error adding item to list: " + ex.Message;
+            messageClass = "alert-danger";
+            showMessage = true;
+        }
+    }
+
+    private async Task OnSelectedListChanged()
+    {
+        if (!string.IsNullOrEmpty(selectedListName))
+        {
+            // Fetch the items for the selected list
+            existingItems = await _context.GiftLists
+                .Where(g => g.ListName == selectedListName)
+                .Select(g => g.GiftName) // Select the GiftName for each item
+                .ToListAsync();
+        }
+        else
+        {
+            existingItems.Clear();
         }
     }
 }
