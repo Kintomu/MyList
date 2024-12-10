@@ -23,13 +23,24 @@ namespace MyList.Tests
             _context.Database.EnsureCreated();
 
             _controller = new GiftListsController(_context);
+            
+            _context.GiftLists.RemoveRange(_context.GiftLists);
+            _context.SaveChanges();
         }
 
         [Fact]
         public async Task GetGiftLists_ReturnsOkResult()
         {
-            _context.GiftLists.Add(new GiftList { ListName = "Test List 1" });
-            _context.GiftLists.Add(new GiftList { ListName = "Test List 2" });
+            _context.GiftLists.Add(new GiftList { 
+                ListName = "Test List 1", 
+                GiftName = "Test Gift 1",  
+                GiftDescription = "Test Description 1"
+            });
+            _context.GiftLists.Add(new GiftList { 
+                ListName = "Test List 2", 
+                GiftName = "Test Gift 2", 
+                GiftDescription = "Test Description 2"
+            });
             await _context.SaveChangesAsync();
             
             var result = await _controller.GetGiftLists();
@@ -61,7 +72,7 @@ namespace MyList.Tests
         [Fact]
         public async Task GetGiftList_NonExistingId_ReturnsNotFound()
         {
-            var result = await _controller.GetGiftList(999); // Use _controller
+            var result = await _controller.GetGiftList(999);
             
             Assert.IsType<NotFoundResult>(result.Result);
         }
@@ -69,7 +80,11 @@ namespace MyList.Tests
         [Fact]
         public async Task PostGiftList_ValidObject_ReturnsCreatedAtAction()
         {
-            var newGiftList = new GiftList { ListName = "New Test List" };
+            var newGiftList = new GiftList { 
+                ListName = "New Test List", 
+                GiftName = "Test Gift",
+                GiftDescription = "Test Description"
+            };
             
             var result = await _controller.PostGiftList(newGiftList);
             
@@ -81,7 +96,11 @@ namespace MyList.Tests
         [Fact]
         public async Task DeleteGiftList_ExistingId_ReturnsNoContent()
         {
-            var giftList = new GiftList { ListName = "Test List 1" };
+            var giftList = new GiftList { 
+                ListName = "Test List 1", 
+                GiftName = "Test Gift",
+                GiftDescription = "Test Description"
+            };
             _context.GiftLists.Add(giftList);
             await _context.SaveChangesAsync();
             var giftListId = giftList.Id;

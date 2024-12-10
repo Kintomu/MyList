@@ -2,9 +2,9 @@
 @using Microsoft.EntityFrameworkCore
 @using MyList.Data_Access
 @using MyList.Models
-@inject GiftListContext _context
+@inject GiftListContext Context
 
-@if (giftLists == null)
+@if (_giftLists == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -14,14 +14,14 @@ else
 
     <div>
         <label for="listName">Select List to Delete:</label>
-        <select id="listName" @bind="selectedListName">
+        <select id="listName" @bind="_selectedListName">
             <option value="">-- Select a list --</option>
-            @foreach (var listName in existingListNames)
+            @foreach (var listName in _existingListNames)
             {
                 <option value="@listName">@listName</option>
             }
         </select>
-        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(selectedListName == "")">Delete List</button>
+        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(_selectedListName == "")">Delete List</button>
     </div>
 
     <br>
@@ -38,7 +38,7 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (var group in giftLists.GroupBy(g => g.ListName))
+        @foreach (var group in _giftLists.GroupBy(g => g.ListName))
         {
             @foreach (var gift in group)
             {
@@ -47,7 +47,7 @@ else
                     <td>@gift.GiftName</td>
                     <td>@gift.GiftDescription</td>
                     <td>@(gift.IsPurchased ? "Done" : "")</td>
-                    <td><input type="checkbox" @bind="selectedItems[gift.Id]"/></td>
+                    <td><input type="checkbox" @bind="_selectedItems[gift.Id]"/></td>
                 </tr>
             }
         }
@@ -58,21 +58,21 @@ else
 }
 
 @code {
-    private List<GiftList> giftLists;
-    private List<string> existingListNames = new();
-    private string selectedListName = "";
-    private Dictionary<int, bool> selectedItems = new();
+    private List<GiftList>? _giftLists;
+    private List<string> _existingListNames = new();
+    private string _selectedListName = "";
+    private Dictionary<int, bool> _selectedItems = new();
 
     protected override async Task OnInitializedAsync()
     {
-        giftLists = await _context.GiftLists.ToListAsync();
+        _giftLists = await Context.GiftLists.ToListAsync();
 
-        foreach (var gift in giftLists)
+        foreach (var gift in _giftLists)
         {
-            selectedItems[gift.Id] = false;
+            _selectedItems[gift.Id] = false;
         }
 
-        existingListNames = await _context.GiftLists
+        _existingListNames = await Context.GiftLists
             .Select(g => g.ListName)
             .Distinct()
             .ToListAsync();
@@ -80,7 +80,7 @@ else
 
     private async Task DeleteSelectedItems()
     {
-        var giftsToDelete = selectedItems.Where(kvp => kvp.Value).Select(kvp => kvp.Key).ToList();
+        var giftsToDelete = _selectedItems.Where(kvp => kvp.Value).Select(kvp => kvp.Key).ToList();
 
         if (giftsToDelete.Any())
         {
@@ -88,23 +88,23 @@ else
             {
                 foreach (var giftId in giftsToDelete)
                 {
-                    var giftToDelete = await _context.GiftLists.FindAsync(giftId);
+                    var giftToDelete = await Context.GiftLists.FindAsync(giftId);
                     if (giftToDelete != null)
                     {
-                        _context.GiftLists.Remove(giftToDelete);
+                        Context.GiftLists.Remove(giftToDelete);
                     }
                 }
 
-                await _context.SaveChangesAsync();
-
-                // Refresh the list AND the dictionary
-                giftLists = await _context.GiftLists.ToListAsync();
-                selectedItems = giftLists.ToDictionary(g => g.Id, g => false); 
+                await Context.SaveChangesAsync();
+                
+                _giftLists = await Context.GiftLists.ToListAsync();
+                _selectedItems = _giftLists.ToDictionary(g => g.Id, _ => false); 
 
                 StateHasChanged();
             }
             catch (Exception ex)
             {
+                //TODO: Add Logger
                 Console.WriteLine("Error deleting items: " + ex.Message);
             }
         }
@@ -114,15 +114,14 @@ else
     {
         try
         {
-            var itemsToDelete = await _context.GiftLists.Where(g => g.ListName == selectedListName).ToListAsync();
+            var itemsToDelete = await Context.GiftLists.Where(g => g.ListName == _selectedListName).ToListAsync();
             if (itemsToDelete.Any())
             {
-                _context.GiftLists.RemoveRange(itemsToDelete);
-                await _context.SaveChangesAsync();
-
-                // Refresh the list and the dropdown
-                giftLists = await _context.GiftLists.ToListAsync();
-                existingListNames = await _context.GiftLists
+                Context.GiftLists.RemoveRange(itemsToDelete);
+                await Context.SaveChangesAsync();
+                
+                _giftLists = await Context.GiftLists.ToListAsync();
+                _existingListNames = await Context.GiftLists
                     .Select(g => g.ListName)
                     .Distinct()
                     .ToListAsync();
@@ -132,6 +131,7 @@ else
         }
         catch (Exception ex)
         {
+            //TODO: Add Logger
             Console.WriteLine("Error deleting list: " + ex.Message);
         }
     }

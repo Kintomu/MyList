@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="cleaned up formatting, added the ability to check items to done status.">
+    <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="fixed formatting, added better delete functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/AddGift.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/GiftList.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Models/GiftList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Models/GiftList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
@@ -137,7 +141,7 @@
       <workItem from="1733601492781" duration="2579000" />
       <workItem from="1733604437030" duration="318000" />
       <workItem from="1733750515171" duration="11333000" />
-      <workItem from="1733837653749" duration="15678000" />
+      <workItem from="1733837653749" duration="18357000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
@@ -187,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733856980085</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed formatting, added better delete functionality.">
+      <option name="closed" value="true" />
+      <created>1733859650457</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733859650457</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +215,8 @@
     <MESSAGE value="added unit tests, and delete page" />
     <MESSAGE value="added add item to list" />
     <MESSAGE value="cleaned up formatting, added the ability to check items to done status." />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up formatting, added the ability to check items to done status." />
+    <MESSAGE value="fixed formatting, added better delete functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed formatting, added better delete functionality." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,6 +227,84 @@
           </properties>
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs</url>
+          <line>26</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Controllers\GiftListsController.cs" containingFunctionPresentation="Method 'GetGiftLists'">
+            <startOffsets>
+              <option value="728" />
+            </startOffsets>
+            <endOffsets>
+              <option value="749" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
+          <line>47</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Tests\GiftListsControllerTests.cs" containingFunctionPresentation="Method 'GetGiftLists_ReturnsOkResult'">
+            <startOffsets>
+              <option value="1557" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1617" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
+          <line>49</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Tests\GiftListsControllerTests.cs" containingFunctionPresentation="Method 'GetGiftLists_ReturnsOkResult'">
+            <startOffsets>
+              <option value="1722" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
+          <line>48</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Tests\GiftListsControllerTests.cs" containingFunctionPresentation="Method 'GetGiftLists_ReturnsOkResult'">
+            <startOffsets>
+              <option value="1630" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1709" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
+          <line>38</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Tests\GiftListsControllerTests.cs" containingFunctionPresentation="Method 'GetGiftLists_ReturnsOkResult'">
+            <startOffsets>
+              <option value="1217" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1412" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs</url>
+          <line>33</line>
+          <properties documentPath="D:\Repos\MyGiftList\MyList\MyList\Tests\GiftListsControllerTests.cs" containingFunctionPresentation="Method 'GetGiftLists_ReturnsOkResult'">
+            <startOffsets>
+              <option value="1008" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1204" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

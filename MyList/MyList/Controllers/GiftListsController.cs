@@ -23,7 +23,8 @@ namespace MyList.Controllers
             {
                 return NotFound(); 
             }
-            return await _context.GiftLists.ToListAsync();
+            var giftLists =  await _context.GiftLists.ToListAsync();
+            return Ok(giftLists); 
         }
         
         [HttpGet("{id}")]
