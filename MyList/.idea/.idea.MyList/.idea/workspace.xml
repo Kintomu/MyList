@@ -4,6 +4,7 @@
     <projectFile profileName="IIS Express">MyList/MyList.csproj</projectFile>
     <projectFile profileName="http">MyList/MyList.csproj</projectFile>
     <projectFile profileName="https">MyList/MyList.csproj</projectFile>
+    <projectFile pubXmlPath="MyList/Properties/PublishProfiles/FolderProfile.pubxml">MyList/MyList.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
@@ -11,19 +12,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,10 @@
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MyList: IIS Express">
+    <configuration name="MyList: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish configuration="Release" platform="Any CPU" publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/MyList/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="-8107312743561277821" uuid_low="-8164062902277839375" />
+      <method v="2" />
+    </configuration>
     <configuration name="MyList: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MyList/MyList.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -136,6 +141,7 @@
       <workItem from="1733750515171" duration="11333000" />
       <workItem from="1733837653749" duration="20630000" />
       <workItem from="1733864880902" duration="563000" />
+      <workItem from="1733868544339" duration="174000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
@@ -209,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733864461736</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="check that the database exists before start, add seed data if needed.">
+      <option name="closed" value="true" />
+      <created>1733868610669</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733868610669</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +242,8 @@
     <MESSAGE value="fixed formatting, added better delete functionality." />
     <MESSAGE value="Fixed tests, and formatting, cleaned up code." />
     <MESSAGE value="Added Logging." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Logging." />
+    <MESSAGE value="check that the database exists before start, add seed data if needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="check that the database exists before start, add seed data if needed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
