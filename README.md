@@ -1,6 +1,6 @@
 # MyList
 
-A simple web application for creating and managing lists.
+A simple web application for creating and managing lists. 
 
 ## Features
 
@@ -8,6 +8,8 @@ A simple web application for creating and managing lists.
 * Add items to lists with names, descriptions, and "done" status
 * View and manage lists
 * Delete individual items or entire lists
+* Uses a SQLite db with a Blazor front end.
+* ASP.net API with swagger documentation. 
 
 ## How to Run the Application
 
