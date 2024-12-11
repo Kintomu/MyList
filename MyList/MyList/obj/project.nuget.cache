@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LrNCed40vX8=",
+  "dgSpecHash": "3cPEg4MMahQ=",
   "success": true,
-  "projectFilePath": "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj",
+  "projectFilePath": "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kinto\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\Kinto\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -12,18 +12,31 @@
   <component name="ChangeListManager">
     <list default="true" id="f703f62d-2fa9-4b35-a8b7-b1d17c667318" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/ref/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/refint/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +55,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kintomu/MyGiftList.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Kintomu/MyList.git&quot;,
     &quot;accountId&quot;: &quot;c93e2730-f03d-4208-8f87-ffcd2852f0da&quot;
   }
 }</component>
@@ -68,6 +81,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;be39000d-b7b5-4f6c-9ff5-d47e492b2faf.executor&quot;: &quot;Debug&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -142,6 +156,7 @@
       <workItem from="1733837653749" duration="20630000" />
       <workItem from="1733864880902" duration="563000" />
       <workItem from="1733868544339" duration="174000" />
+      <workItem from="1733924428441" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />

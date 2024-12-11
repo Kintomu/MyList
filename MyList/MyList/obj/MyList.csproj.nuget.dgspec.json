@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj": {}
+    "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj": {
+    "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj",
+        "projectUniqueName": "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj",
         "projectName": "MyList",
-        "projectPath": "D:\\Repos\\MyGiftList\\MyList\\MyList\\MyList.csproj",
+        "projectPath": "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj",
         "packagesPath": "C:\\Users\\Kinto\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\",
+        "outputPath": "D:\\testfolder\\MyList\\MyList\\MyList\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
