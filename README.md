@@ -9,7 +9,8 @@ A simple web application for creating and managing lists.
 * View and manage lists
 * Delete individual items or entire lists
 * Uses a SQLite db with a Blazor front end.
-* ASP.net API with swagger documentation. 
+* ASP.net API with swagger documentation.
+* Local Appdata logging.
 
 ## How to Run the Application
 
