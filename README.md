@@ -63,7 +63,3 @@ A simple web application for creating and managing lists.
 ## Contributing
 
 * If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request on the GitHub repository.
-
-## License
-
-* This project is licensed under the [License Name] license.
