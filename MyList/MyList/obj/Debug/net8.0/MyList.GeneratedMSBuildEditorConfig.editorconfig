@@ -17,51 +17,51 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyList
 build_property.RootNamespace = MyList
-build_property.ProjectDir = D:\testfolder\MyList\MyList\MyList\
+build_property.ProjectDir = D:\Repos\deidei\MyList\MyList\MyList\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\testfolder\MyList\MyList\MyList
+build_property.MSBuildProjectDirectory = D:\Repos\deidei\MyList\MyList\MyList
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/App.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Pages/AddGift.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Pages/AddGift.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRHaWZ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Pages/DeleteList.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Pages/DeleteList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEZWxldGVMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Pages/Error.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Pages/Gifts.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Pages/Gifts.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHaWZ0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Pages/Home.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Routes.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/_Imports.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/testfolder/MyList/MyList/MyList/Components/Layout/MainLayout.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-9p9saz5bwh
 
-[D:/testfolder/MyList/MyList/MyList/Components/Layout/NavMenu.razor]
+[D:/Repos/deidei/MyList/MyList/MyList/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-03jf6im88s

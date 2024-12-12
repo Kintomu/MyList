@@ -7,9 +7,10 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyList", "Logs");
+var logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyList",
+    "Logs");
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.File(Path.Combine(logDirectory, $"log-{DateTime.Now:yyyy-MM-dd}.log")) 
+    .WriteTo.File(Path.Combine(logDirectory, $"log-{DateTime.Now:yyyy-MM-dd}.log"))
     .CreateLogger();
 
 builder.Host.UseSerilog();
@@ -24,15 +25,33 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
     c.EnableAnnotations();
     c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+    c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
+    {
+        Description = "API Key Authentication",
+        Name = "Authorization", // Header name
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "ApiKey"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "ApiKey"
+                }
+            },
+            new string[] { }
+        }
+    });
 });
 
 var app = builder.Build();
-
 app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Gift List API V1");
-});
+app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Gift List API V1"); });
 
 app.UseHttpsRedirection();
 

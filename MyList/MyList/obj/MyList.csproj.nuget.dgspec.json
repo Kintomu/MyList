@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj": {}
+    "D:\\Repos\\deidei\\MyList\\MyList\\MyList\\MyList.csproj": {}
   },
   "projects": {
-    "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj": {
+    "D:\\Repos\\deidei\\MyList\\MyList\\MyList\\MyList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj",
+        "projectUniqueName": "D:\\Repos\\deidei\\MyList\\MyList\\MyList\\MyList.csproj",
         "projectName": "MyList",
-        "projectPath": "D:\\testfolder\\MyList\\MyList\\MyList\\MyList.csproj",
+        "projectPath": "D:\\Repos\\deidei\\MyList\\MyList\\MyList\\MyList.csproj",
         "packagesPath": "C:\\Users\\Kinto\\.nuget\\packages\\",
-        "outputPath": "D:\\testfolder\\MyList\\MyList\\MyList\\obj\\",
+        "outputPath": "D:\\Repos\\deidei\\MyList\\MyList\\MyList\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -80,6 +80,10 @@
             "Microsoft.TestPlatform": {
               "target": "Package",
               "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

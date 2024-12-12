@@ -10,15 +10,27 @@ namespace MyList.Controllers
     public class GiftListsController : ControllerBase
     {
         private readonly GiftListContext _context;
+        private readonly IConfiguration _configuration;
 
-        public GiftListsController(GiftListContext context)
+        public GiftListsController(GiftListContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
         
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GiftList>>> GetGiftLists()
+        public async Task<ActionResult<IEnumerable<GiftList>>> GetGiftLists([FromHeader(Name = "Authorization")] string apiKey)
         {
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                return Unauthorized("API key is required.");
+            }
+            
+            if (apiKey != _configuration["ApiKey"])
+            {
+                return Unauthorized("Invalid API key.");
+            }
+            
             if (_context.GiftLists == null)
             {
                 return NotFound(); 
@@ -28,12 +40,18 @@ namespace MyList.Controllers
         }
         
         [HttpGet("{id}")]
-        public async Task<ActionResult<GiftList>> GetGiftList(int id)
+        public async Task<ActionResult<GiftList>> GetGiftList(int id, [FromHeader(Name = "Authorization")] string apiKey)
         {
+            if (string.IsNullOrEmpty(apiKey) || apiKey != _configuration["ApiKey"])
+            {
+                return Unauthorized("Invalid API key.");
+            }
+            
             if (_context.GiftLists == null)
             {
                 return NotFound();
             }
+            
             var giftList = await _context.GiftLists.FindAsync(id);
 
             if (giftList == null)
@@ -45,12 +63,18 @@ namespace MyList.Controllers
         }
         
         [HttpPost]
-        public async Task<ActionResult<GiftList>> PostGiftList(GiftList giftList)
+        public async Task<ActionResult<GiftList>> PostGiftList(GiftList giftList, [FromHeader(Name = "Authorization")] string apiKey)
         {
+            if (string.IsNullOrEmpty(apiKey) || apiKey != _configuration["ApiKey"])
+            {
+                return Unauthorized("Invalid API key.");
+            }
+            
             if (_context.GiftLists == null)
             {
                 return Problem("Entity set 'GiftListContext.GiftLists' is null.");
             }
+            
             _context.GiftLists.Add(giftList);
             await _context.SaveChangesAsync();
 
@@ -58,12 +82,18 @@ namespace MyList.Controllers
         }
         
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGiftList(int id)
+        public async Task<IActionResult> DeleteGiftList(int id, [FromHeader(Name = "Authorization")] string apiKey)
         {
+            if (string.IsNullOrEmpty(apiKey) || apiKey != _configuration["ApiKey"])
+            {
+                return Unauthorized("Invalid API key.");
+            }
+            
             if (_context.GiftLists == null)
             {
                 return NotFound();
             }
+            
             var giftList = await _context.GiftLists.FindAsync(id);
             if (giftList == null)
             {

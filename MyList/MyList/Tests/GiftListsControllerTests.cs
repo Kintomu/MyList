@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using MyList.Controllers;
 using MyList.Models;
 using Xunit;
@@ -21,8 +22,11 @@ namespace MyList.Tests
             _context = new TestGiftListContext(options);
             _context.Database.OpenConnection();
             _context.Database.EnsureCreated();
+            
+            var configurationMock = new Mock<IConfiguration>();
+            configurationMock.Setup(c => c["ApiKey"]).Returns("mylist_api_key");
 
-            _controller = new GiftListsController(_context);
+            _controller = new GiftListsController(_context, configurationMock.Object);
             
             _context.GiftLists.RemoveRange(_context.GiftLists);
             _context.SaveChanges();
@@ -42,8 +46,8 @@ namespace MyList.Tests
                 GiftDescription = "Test Description 2"
             });
             await _context.SaveChangesAsync();
-            
-            var result = await _controller.GetGiftLists();
+
+            var result = await _controller.GetGiftLists("mylist_api_key");
             
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var giftLists = Assert.IsAssignableFrom<IEnumerable<GiftList>>(okResult.Value);
@@ -62,7 +66,7 @@ namespace MyList.Tests
             await _context.SaveChangesAsync();
             var giftListId = giftList.Id;
             
-            var result = await _controller.GetGiftList(giftListId);
+            var result = await _controller.GetGiftList(giftListId, "mylist_api_key");
             
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var returnedGiftList = Assert.IsType<GiftList>(okResult.Value);
@@ -72,7 +76,7 @@ namespace MyList.Tests
         [Fact]
         public async Task GetGiftList_NonExistingId_ReturnsNotFound()
         {
-            var result = await _controller.GetGiftList(999);
+            var result = await _controller.GetGiftList(999,"mylist_api_key");
             
             Assert.IsType<NotFoundResult>(result.Result);
         }
@@ -86,7 +90,7 @@ namespace MyList.Tests
                 GiftDescription = "Test Description"
             };
             
-            var result = await _controller.PostGiftList(newGiftList);
+            var result = await _controller.PostGiftList(newGiftList,"mylist_api_key");
             
             var createdAtActionResult = Assert.IsType<CreatedAtActionResult>(result.Result);
             var returnedGiftList = Assert.IsType<GiftList>(createdAtActionResult.Value);
@@ -105,7 +109,7 @@ namespace MyList.Tests
             await _context.SaveChangesAsync();
             var giftListId = giftList.Id;
             
-            var result = await _controller.DeleteGiftList(giftListId);
+            var result = await _controller.DeleteGiftList(giftListId,"mylist_api_key");
             
             Assert.IsType<NoContentResult>(result);
         }
@@ -113,7 +117,7 @@ namespace MyList.Tests
         [Fact]
         public async Task DeleteGiftList_NonExistingId_ReturnsNotFound()
         {
-            var result = await _controller.DeleteGiftList(999);
+            var result = await _controller.DeleteGiftList(999,"mylist_api_key");
             
             Assert.IsType<NotFoundResult>(result);
         }
