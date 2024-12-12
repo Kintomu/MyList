@@ -75,6 +75,7 @@ A simple web application for creating and managing lists.
 
 * The application also provides an API for managing lists and items.
 * You can access the API documentation through Swagger UI at `/swagger`.
+* The API key is stored in appsettings.json the default key is "mylist_api_key"
 
 ## Contributing
 
