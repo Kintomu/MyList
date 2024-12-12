@@ -2,6 +2,19 @@
 
 A simple web application for creating and managing lists. 
 
+## Code Louisville Project Requirements 
+
+* Web based application using Blazor
+* ASP.net API with Authorization
+* SQLite database interaction
+
+ ### Feature List
+* 3 or more unit tests
+* Created a list that interacts with the UI
+* Written log to local appdata
+* Lists can be managed through the API
+  
+
 ## Features
 
 * Create multiple lists
