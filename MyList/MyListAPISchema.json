@@ -1,0 +1,100 @@
+{
+  "/api/GiftLists": {
+    "GET": {
+      "response": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32" 
+            },
+            "listName": {
+              "type": "string"
+            },
+            "giftName": {
+              "type": "string"
+            },
+            "giftDescription": {
+              "type": "string"
+            },
+            "isPurchased": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "POST": {
+      "request": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "listName": {
+            "type": "string"
+          },
+          "giftName": {
+            "type": "string"
+          },
+          "giftDescription": {
+            "type": "string"
+          },
+          "isPurchased": {
+            "type": "boolean"
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "listName": {
+            "type": "string"
+          },
+          "giftName": {
+            "type": "string"
+          },
+          "giftDescription": {
+            "type": "string"
+          },
+          "isPurchased": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "/api/GiftLists/{id}": {
+    "GET": {
+      "response": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "listName": {
+            "type": "string"
+          },
+          "giftName": {
+            "type": "string"
+          },
+          "giftDescription": {
+            "type": "string"
+          },
+          "isPurchased": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "DELETE": {}
+  }
+}
