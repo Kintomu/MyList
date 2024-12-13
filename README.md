@@ -13,6 +13,7 @@ A simple web application for creating and managing lists.
 * Created a list that interacts with the UI
 * Written log to local appdata
 * Lists can be managed through the API
+* Lists can be exported to CSV
   
 
 ## Features
@@ -21,6 +22,7 @@ A simple web application for creating and managing lists.
 * Add items to lists with names, descriptions, and "done" status
 * View and manage lists
 * Delete individual items or entire lists
+* Download lists to a CSV file
 * Uses a SQLite db with a Blazor front end.
 * ASP.net API with swagger documentation.
 * Local Appdata logging.
@@ -65,6 +67,7 @@ A simple web application for creating and managing lists.
 3. **View and Manage Lists Page (`/Gifts`)**
    - This page displays all your lists and their items.
    - You can mark items as "Done" by checking the checkbox next to them.
+   - You can export the lists to a CSV file.
 
 4. **Delete Lists Page (`/DeleteList`)**
    - This page allows you to delete entire lists or individual items.
