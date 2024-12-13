@@ -22,7 +22,8 @@ else
                 <option value="@listName">@listName</option>
             }
         </select>
-        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(_selectedListName == "")">Delete List</button>
+        <button class="btn btn-danger" @onclick="DeleteEntireList" disabled="@(_selectedListName == "")">Delete List
+        </button>
     </div>
 
     <br>
@@ -43,13 +44,16 @@ else
         {
             @foreach (var gift in group)
             {
-                <tr>
-                    <td>@group.Key</td>
-                    <td>@gift.GiftName</td>
-                    <td>@gift.GiftDescription</td>
-                    <td>@(gift.IsPurchased ? "Done" : "")</td>
-                    <td><input type="checkbox" @bind="_selectedItems[gift.Id]"/></td>
-                </tr>
+                @if (!string.IsNullOrEmpty(gift.GiftName))
+                {
+                    <tr>
+                        <td>@group.Key</td>
+                        <td>@gift.GiftName</td>
+                        <td>@gift.GiftDescription</td>
+                        <td>@(gift.IsPurchased ? "Done" : "")</td>
+                        <td><input type="checkbox" @bind="_selectedItems[gift.Id]"/></td>
+                    </tr>
+                }
             }
         }
         </tbody>
@@ -97,9 +101,9 @@ else
                 }
 
                 await Context.SaveChangesAsync();
-                
+
                 _giftLists = await Context.GiftLists.ToListAsync();
-                _selectedItems = _giftLists.ToDictionary(g => g.Id, _ => false); 
+                _selectedItems = _giftLists.ToDictionary(g => g.Id, _ => false);
 
                 StateHasChanged();
             }
@@ -120,7 +124,7 @@ else
             {
                 Context.GiftLists.RemoveRange(itemsToDelete);
                 await Context.SaveChangesAsync();
-                
+
                 _giftLists = await Context.GiftLists.ToListAsync();
                 _existingListNames = await Context.GiftLists
                     .Select(g => g.ListName)
@@ -136,4 +140,5 @@ else
             Console.WriteLine("Error deleting list: " + ex.Message);
         }
     }
+
 }

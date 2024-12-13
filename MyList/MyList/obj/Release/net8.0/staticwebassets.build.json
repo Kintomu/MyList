@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RI+grvYCQ93LIyXxNRpGEZzc3EmcZpa/siQCeGUPmFY=",
+  "Hash": "nsbtMMR83MS3Uj1At3KhnYYbj4dXGlNxNFPnTfa6uHM=",
   "Source": "MyList",
   "BasePath": "_content/MyList",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyList\\wwwroot",
       "Source": "MyList",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\",
       "BasePath": "_content/MyList",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\MyList.styles.css",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\MyList.styles.css",
       "SourceId": "MyList",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MyList",
       "RelativePath": "MyList.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\MyList.styles.css"
+      "OriginalItemSpec": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\bundle\\MyList.styles.css"
     },
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css",
       "SourceId": "MyList",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MyList",
       "RelativePath": "MyList.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Repos\\MyGiftList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\MyList.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\app.css",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\app.css",
       "SourceId": "MyList",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\",
       "BasePath": "_content/MyList",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "MyList",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\",
       "BasePath": "_content/MyList",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MyList",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\",
       "BasePath": "_content/MyList",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\favicon.png",
+      "Identity": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\favicon.png",
       "SourceId": "MyList",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Repos\\MyGiftList\\MyList\\MyList\\wwwroot\\",
+      "ContentRoot": "D:\\Repos\\newtestplace\\MyList\\MyList\\MyList\\wwwroot\\",
       "BasePath": "_content/MyList",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

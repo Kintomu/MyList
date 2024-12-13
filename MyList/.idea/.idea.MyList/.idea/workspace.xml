@@ -14,26 +14,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MyList.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Controllers/GiftListsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/GiftList.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/MyList.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/MyList.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Tests/GiftListsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/GiftList.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/DeleteList.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/Components/Pages/Gifts.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/MyList.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Debug/net8.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/bin/Release/net8.0/MyList.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/MyList.genruntimeconfig.cache" afterDir="false" />
@@ -46,6 +41,23 @@
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/MyList.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/MyList.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/ref/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/ref/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/refint/MyList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/refint/MyList.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/Release/net8.0/staticwebassets.pack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyList/obj/project.packagespec.json" afterDir="false" />
@@ -74,7 +86,11 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c8e7ca976f350cba9836d5565dac56b11e0b56656fa786460eb1395857a6fa/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7beca651b1af466d51e879c74afac8ebca741c3e99965ead1e70bb60811c3054/ComponentBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8f01ba41853b8bd86b6d5b7b8e1e669b98673feb6a7a1b2b0a3622f9d4ad/DbContextOptionsBuilder`.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9eda537f15ea23cdfae523c19e87eb303a3ded88937ae7e55919387a43f70/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9ff4a377ddd8b8376a34e93b525519e26e3989a7f57783aa958abc10f5ec87/AsyncValueTaskMethodBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb367341658aaedd7de424d4c9189db33c4387e268dcc4011918569442ab12/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MyList/wwwroot/bootstrap/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -89,7 +105,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.MyList: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.MyList: IIS Express.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "be39000d-b7b5-4f6c-9ff5-d47e492b2faf.executor": "Debug",
@@ -172,6 +188,8 @@
       <workItem from="1733924428441" duration="81000" />
       <workItem from="1733935023756" duration="168000" />
       <workItem from="1733961325587" duration="6800000" />
+      <workItem from="1734021008348" duration="1972000" />
+      <workItem from="1734099504475" duration="1659000" />
     </task>
     <task id="LOCAL-00001" summary="Added API and Swagger UI">
       <option name="closed" value="true" />
